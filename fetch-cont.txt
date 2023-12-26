@@ -1,0 +1,13 @@
+fetch('https://jsonplaceholder.typicode.com/todos')
+.then(response => response.json())
+.then(
+json => {
+console.log(json)
+//let todo = JSON.parse(json)
+json.forEach(element => {
+document.getElementsByTagName("body")[0].append(
+document.createElement('div').innerHTML=element.title
+)
+})
+}
+)

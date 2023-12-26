@@ -1,0 +1,57 @@
+Task 1:
+
+'use strict';
+const success = (value) => ({ value: value });
+const blowup = (value) => {throw new Error('blowing up with value ' + value);};
+const process = (successFn, errorFn) => {
+	const value = Math.round(Math.random() * 100, 2);
+	return value > 50 ? successFn(value) : errorFn(value)
+};
+try {
+	console.log(process(success, blowup));
+} catch(ex) {
+	console.log(ex.message);
+}
+
+
+Task 2:
+
+'use strict';
+const numbers = [1, 5, 2, 6, 8, 3, 4, 9, 7, 6];
+let totalOfDoubleOfEven = 0;
+numbers.filter(number => number % 2 === 0).forEach(number => totalOfDoubleOfEven += number * 2);
+console.log(totalOfDoubleOfEven);
+
+
+Task 3:
+
+'use strict';
+const students = [
+{
+name: "Anna",
+sex: "f",
+grades: [4.5, 3.5, 4]
+},
+{
+name: "Dennis",
+sex: "m",
+country: "Germany",
+grades: [5, 1.5, 4]
+},
+{
+name: "Martha",
+sex: "f",
+grades: [5, 4, 2.5, 3]
+},
+{
+name: "Brock",
+sex: "m",
+grades: [4, 3, 2]
+}
+];
+
+function studentResult(students){
+    return (students.filter(student => student.sex === "f").map(student => {student.grades = student.grades.reduce((a, b) => a + b, 0) / student.grades.length 
+    return student}));
+}
+console.log(studentResult(students));

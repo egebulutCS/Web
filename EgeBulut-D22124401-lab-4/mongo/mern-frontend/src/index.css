@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.editButton {
+  width: 55px;
+  height: 40px;
+  padding: 5px;
+  margin: 0 3px;
+  color: white;
+  background-color: #c300ff;
+  outline: none;
+  border: 1px solid #c300ff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #3f3f3f;
+}
+
+.editButton:hover {
+  box-shadow: 2px 2px 3px ;
+}
+
+.editButton:active {
+  box-shadow: 1px 1px 3px ;
+}
